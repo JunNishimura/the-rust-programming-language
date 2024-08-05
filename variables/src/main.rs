@@ -10,8 +10,6 @@ fn main() {
 
     println!("The value of x is: {}", x);
 
-    let guess: u32 = "42".parse().expect("Not a number!");
-
     another_function();
     another_function2(10);
 
