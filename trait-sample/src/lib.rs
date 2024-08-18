@@ -57,6 +57,6 @@ impl<T: Display + PartialOrd> Pair<T> {
 	} else {
 	    println!("The largest member is y = {}", self.y);
 	}
-    }
+	}
 }
  
