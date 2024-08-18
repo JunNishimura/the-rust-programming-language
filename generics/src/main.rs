@@ -22,7 +22,7 @@ fn largest_char(list: &[char]) -> char {
     largest
 }
 
-fn largest<T>(list: &[T]) -> T {
+fn largest<T: std::cmp::PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
 
     for &item in list.iter() {
@@ -55,4 +55,10 @@ fn main() {
     let p3 = p1.mixup(p2);
 
     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
+
+    let number_list = vec![34, 50, 25, 100, 65];
+
+    let result = largest(&number_list);
+
+    println!("The largest number is {}", result);
 }
